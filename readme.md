@@ -14,10 +14,10 @@ _Входные артефакты_ :
 ### В каком виде отдавать результат:
 Сделать fork текущего репозитория, все изменения фиксировать в git (чем подробнее будет история тем легче нам будет понять компетенцию владения систмами контроля версий). Описать каким образом нам разворчивать среду, чтобы мы могли оценить работоспособность результата
 
-#Развернуть проект 
+#### Развернуть проект 
 
-1.php composer.phar create-project yiisoft/yii2-app-advanced advanced
-2 В корне проекта php init
-3.common/config/main-local.php прописать параметры БД
-4.git clone https://github.com/stat200/test-task-user-friends, из папки console скопировать папки в advanced/console
-5.Запуск php yii recomendation/index
+ - php composer.phar create-project yiisoft/yii2-app-advanced advanced
+ -  В корне проекта php init
+ - common/config/main-local.php прописать параметры БД
+ - git clone https://github.com/stat200/test-task-user-friends, из папки console скопировать папки в advanced/console
+ - Запуск php yii recomendation/index
