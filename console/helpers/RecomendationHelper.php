@@ -17,4 +17,19 @@ class RecomendationHelper
         return $coefficient;
     }
 
+    /**
+     * @param $arr
+     * @return array
+     */
+    public static function prepareUserFriendsArray($arr)
+    {
+        $result = [];
+        foreach ($arr as $item) {
+            foreach ($item['usersFriends'] as $sub_item) {
+                $result[$sub_item['user_id']][] = $sub_item['friend_id'];
+            }
+        }
+
+        return $result;
+    }
 }
