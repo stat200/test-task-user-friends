@@ -4,6 +4,7 @@ namespace console\controllers;
 use console\services\RecomendationService;
 use yii\console\Controller;
 use yii\base\Module;
+use console\models\User;
 
 
 class RecomendationController extends Controller
@@ -25,5 +26,13 @@ class RecomendationController extends Controller
                 },
             ])
             ->all();
+
+        $recomendations = $this->service->getRecomendationFriendList($usersFriendsList);
+
+        foreach ($recomendations as $key => $item) {
+            foreach ($item as $sub_key => $sub_item) {
+                $this->stdout('user_id '.$key.' recomend_id '.$sub_key.' weight '.$sub_item."\n");
+            }
+        }
     }
 }
