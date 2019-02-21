@@ -1,0 +1,23 @@
+<?php
+namespace console\controllers;
+
+use console\services\RecomendationService;
+use yii\console\Controller;
+use yii\base\Module;
+
+
+class RecomendationController extends Controller
+{
+    private $service;
+
+    public function __construct(string $id, Module $module, RecomendationService $service, array $config = [])
+    {
+        parent::__construct($id, $module, $config);
+        $this->service = $service;
+    }
+
+    public function actionIndex()
+    {
+
+    }
+}
