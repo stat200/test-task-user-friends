@@ -18,6 +18,12 @@ class RecomendationController extends Controller
 
     public function actionIndex()
     {
-
+        $usersFriendsList = User::find()
+            ->joinWith([
+                'usersFriends' => function ($query) {
+                    $query->andWhere(['<>', 'user_id', 'friend_id']);
+                },
+            ])
+            ->all();
     }
 }
